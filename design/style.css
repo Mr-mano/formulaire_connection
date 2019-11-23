@@ -1,0 +1,105 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #ECECEC;
+}
+.input_formulaire{
+    margin-left: 30px;
+    min-width: 180px;
+    padding: 5px 10px;
+}
+a{
+    text-decoration: none;
+    color: brown;
+}
+a:hover{
+    color: rgb(219, 85, 85);
+}
+p{
+    margin-bottom: 20px;
+
+}
+header{
+    text-align: center;
+    background-color: #2C3E50;
+    height: 70px;
+    padding: 15px;
+    width: 100vw;
+}
+header h1{
+    color: white;
+    margin: 0;
+}
+.container{
+width: 1000px;
+margin: 0 auto;
+padding: 5% 20%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.container > p{
+    
+    margin-bottom: 25px;
+text-align: center;
+    
+    }
+button{
+    margin: auto;
+}
+.container__form{
+    margin: auto;
+}
+.container__button{
+    text-align: center;
+    margin-top: 15px;
+}
+button{
+    background-color: rgb(214, 69, 65);
+    border: 0;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.4);
+}
+button:hover{
+    opacity: 0.9;
+}
+.error{
+    color: rgb(214, 69, 65);
+    font-size: 1.2rem;
+    text-align: center;
+}
+.true{
+    color: rgb(22, 128, 31);
+    font-size: 1.2rem;
+    text-align: center;
+}
+@media only screen and (max-width: 780px){
+    .container{
+        width: 500px;
+        padding: 5%;
+    }
+}
+@media only screen and (max-width: 480px){
+    .container{
+        width: auto;
+        padding: 0;
+    }
+    .input_formulaire{
+        margin-left: 10px;
+    }
+}
+.connect__label{
+    cursor: pointer;
+}
