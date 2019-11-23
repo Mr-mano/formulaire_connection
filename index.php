@@ -12,7 +12,7 @@ if (!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['passwo
 
     //test si password = password_confirm
     if ($password != $password_confirm) {
-        header('location: ../form_connection/?error=1&pass=1');
+        header('location: ../form_connection?error=1&pass=1');
         exit();
     }
 
@@ -21,7 +21,7 @@ if (!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['passwo
     $req->execute(array($email));
     while ($verif_email = $req->fetch()) {
         if ($verif_email['numberEmail'] != 0) {
-            header('location: ../form_connection/?error=1&email=1');
+            header('location: ../form_connection?error=1&email=1');
             exit();
         }
     }
@@ -36,7 +36,7 @@ if (!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['passwo
     //envoie de le requete en base de données
     $req = $db->prepare('INSERT INTO users(pseudo, email, password, secret) VALUES(?, ?, ?, ?)');
     $req->execute(array($pseudo, $email, $password, $secret));
-    header('location: ../form_connection/?true=1');
+    header('location: ../form_connection?true=1');
     exit();
 }
 ?>
